@@ -12,7 +12,9 @@
     "dev": "vite",
     "prebuild": "npm run check:runtime",
     "build": "tsc && vite build && node scripts/prepare-sites-build.mjs",
-    "qa:visual": "node scripts/qa-visual.mjs"
+    "build:pages": "tsc && vite build --base=/Doctor-plus-app/ && node scripts/prepare-sites-build.mjs && node scripts/prepare-github-pages.mjs",
+    "qa:visual": "node scripts/qa-visual.mjs",
+    "qa:pages": "npm run check:runtime && npm run build:pages && node scripts/qa-github-pages.mjs"
   },
   "dependencies": {
     "@fontsource/roboto": "5.2.10",

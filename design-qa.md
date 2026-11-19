@@ -3,6 +3,7 @@
 ## Evidence
 
 - Generated browser captures under `qa/screenshots/` are local-only and excluded from Git to keep the repository lean. Regenerate them with `npm run qa:visual`.
+- The GitHub Pages project-path check runs with `npm run qa:pages`; it rebuilds for `/Doctor-plus-app/`, opens the built site in Chromium, checks Arabic and English direction and branding assets, and checks tablet and short desktop widths. It saves `github-pages-login-ar.png` and `github-pages-login-en.png` locally.
 - Source visual truth: `qa/reference-doctor-plus-board.png` (405 × 845 px) and `qa/reference-doctor-plus-roles-board.png` (711 × 840 px), the supplied reference boards. Focused patient home crop: `qa/reference-home-screen.png` (53 × 112 px); focused doctor crop: `qa/reference-doctor-screen.png` (58 × 114 px).
 - Implementation: `http://127.0.0.1:4174/`.
 - Main implementation capture: `qa/screenshots/iphone-home-ar-1x.png` (393 × 852 px CSS, device scale 1).
@@ -69,6 +70,7 @@
 - Redesigned the login backdrop with a soft clinical gradient and very light blue/teal corner glows. Removed the watermark from the login state so it cannot pass behind fields or controls; decorative layers ignore pointer input and remain behind content.
 - Restored the admin reports screen so dashboard reports links have a valid destination and production build completes.
 - Redesigned login with a more engaging healthcare welcome card, doctor portrait, privacy reassurance, and clear icon-led patient/doctor/admin choices. Tightened spacing around the welcome copy and form so the visual treatment stays mobile friendly. Added Arabic and English login captures and LTR/RTL assertions.
+- Prepared GitHub Pages deployment with a project-path build and static asset path rewriting. The base-path browser QA command verifies the bundled site at `/Doctor-plus-app/` in Arabic and English; deployment remains gated on the repository's Pages eligibility and a push of the prepared workflow.
 
 ## Final result
 
