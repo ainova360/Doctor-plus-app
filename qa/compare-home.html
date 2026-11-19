@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Doctor Plus visual comparison</title>
+    <style>
+      * { box-sizing: border-box; }
+      body { margin: 0; padding: 24px; color: #253750; background: #f4f7fb; font: 14px/1.4 Arial, sans-serif; }
+      h1 { margin: 0 0 6px; font-size: 20px; }
+      p { margin: 0 0 20px; color: #78869a; font-size: 12px; }
+      .compare { display: flex; align-items: flex-start; gap: 24px; }
+      figure { display: grid; justify-items: center; gap: 10px; margin: 0; padding: 16px; border: 1px solid #e2e8f0; border-radius: 14px; background: #fff; }
+      figcaption { color: #667790; font-weight: 700; }
+      img { display: block; height: 852px; width: auto; border: 1px solid #e8edf4; border-radius: 10px; object-fit: fill; background: #fff; }
+      .reference img { image-rendering: auto; }
+    </style>
+  </head>
+  <body>
+    <h1>Doctor Plus home: source and implementation</h1>
+    <p>Same patient home state, normalized to an 852 CSS pixel height. The source is a low-resolution thumbnail inside the supplied screen board.</p>
+    <div class="compare">
+      <figure class="reference"><figcaption>Reference home screen · source 53 × 112 px</figcaption><img src="./reference-home-screen.png" alt="Cropped patient home screen from the supplied Doctor Plus board" /></figure>
+      <figure><figcaption>Prototype · app screen 393 × 852 CSS px, device scale 1</figcaption><img src="./screenshots/iphone-home-ar-1x.png" alt="Doctor Plus patient home prototype screen" /></figure>
+    </div>
+  </body>
+</html>
